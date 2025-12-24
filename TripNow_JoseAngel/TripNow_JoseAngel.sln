@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripNow_JoseAngel", "TripNow_JoseAngel.csproj", "{8A123417-A284-49EF-9912-3F33B7CBD1EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripNow_JoseAngel.Tests", "..\TripNow_JoseAngel.Tests\TripNow_JoseAngel.Tests.csproj", "{A49FC85E-B2E6-2872-B634-BB962A6AF861}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A123417-A284-49EF-9912-3F33B7CBD1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A123417-A284-49EF-9912-3F33B7CBD1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A123417-A284-49EF-9912-3F33B7CBD1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A123417-A284-49EF-9912-3F33B7CBD1EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A49FC85E-B2E6-2872-B634-BB962A6AF861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A49FC85E-B2E6-2872-B634-BB962A6AF861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A49FC85E-B2E6-2872-B634-BB962A6AF861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A49FC85E-B2E6-2872-B634-BB962A6AF861}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {665715E4-D94E-4D89-A3F5-E459C702838A}
+	EndGlobalSection
+EndGlobal

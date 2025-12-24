@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Jose2112*"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    networks:
+      - tripnow-network
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Jose2112* -Q "SELECT 1" || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ConnectionStrings__DefaultConnection: "Server=db;Database=TripNowDb;User Id=sa;Password=Jose2112*;TrustServerCertificate=true;"
+      ExternalServices__RiskEvaluationUrl: "https://vuc42ahokh5whcd5r5in7tj2km0jvjxu.lambda-url.us-east-1.on.aws/risk-evaluation"
+    ports:
+      - "5213:8080"
+      - "7218:8081"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - tripnow-network
+
+volumes:
+  sqlserver_data:
+
+networks:
+  tripnow-network:
+    driver: bridge
